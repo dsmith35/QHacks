@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="theme-color" content="#0C4B33" />
+    <meta name="background-color" content="#0C4B33" />
+    <link rel="icon" type="image/png" href="{% static "frontend/logo-32.png" %}" />
+    <link rel="manifest" href="{% static "frontend/manifest.json" %}" />
+    <link rel="apple-touch-icon" href="{% static "frontend/logo-512.png" %}"/>
+  </head>
+  <body class="h-full">
+    <div id="root"></div>
+  </body>
+  <script src="{% static "frontend/index.js" %}" defer type="text/javascript"></script>
+  <noscript>Javascript is not enabled on your browser</noscript>
+</html>

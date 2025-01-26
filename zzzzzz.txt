@@ -1,0 +1,63 @@
+Backend:
+poetry run python manage.py runserver
+
+Frontend:
+npm run dev
+
+
+
+when starting for first time: npm install and remove node_modules in frontend
+
+
+random user:
+justintrudeau@gmail.com
+goathair123!
+
+
+make sure to rename both .env.example in backend and frontend to .env
+
+
+adding new page:
+    frontend/lib/pages
+    frontend/lib/routes.tsx
+    frontend/lib/index.tsx
+
+
+
+adding new column to table:
+    publications.py in models, views, admin, serializers
+    types.ts <- frontend/lib/api
+
+    python manage.py makemigrations
+    python manage.py migrate
+
+
+
+make backend up to date (clear browser cache):
+    ctrl + f5
+
+
+clear database:
+    python manage.py flush
+
+
+fix random shit:
+    pnpm run dev
+
+new database object:
+    make sure to add to admin init file
+
+
+
+
+use http://127.0.0.1:port and not localhost (for backend especially, idk about frontend)
+
+datbasepassword: same as computer login password
+
+
+from start:
+pnpm run bootstrap
+pip install channels django-allauth dj-rest-auth django-phonenumber-field django-phonenumbers
+pnpm
+BACKEND: poetry run python manage.py runserver
+FRONTEND: npm run dev

@@ -1,0 +1,41 @@
+# Virtual environment
+venv
+
+# Python
+__pycache__
+
+# Django
+db.sqlite3
+.env
+core/static
+core/media
+
+# Webpack
+frontend/static/frontend
+
+#frontend env
+frontend/.env
+
+# Tailwind
+frontend/lib/index.css
+
+# npm
+node_modules
+
+# Jest
+coverage
+
+# Debug
+.debug
+
+# VS Code
+.vscode
+
+# Ionide
+.ionide
+
+# IntelliJ
+.idea
+
+# Ruff
+.ruff_cache

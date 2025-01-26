@@ -1,0 +1,39 @@
+{
+  "name": "django-react-typescript",
+  "version": "0.1.0",
+  "private": true,
+  "description": "This is an non-opinionated Django + React boilerplate built with great development experience and easy deployment in mind.",
+  "scripts": {
+    "bootstrap": "concurrently -n global,backend,frontend \"pnpm i\" \"poetry install\" \"cd frontend && pnpm i\"",
+    "setup:env": "sh ./scripts/setup_env.sh",
+    "test:static": "poetry run ruff check",
+    "format": "poetry run ruff format",
+    "build:frontend": "cd frontend && pnpm i && pnpm run build",
+    "dev:db:up": "docker compose -f ./docker-compose-dev-db.yml up",
+    "dev:db:migrate": "poetry run python3 manage.py migrate",
+    "dev:db:makemigrations": "poetry run python3 manage.py makemigrations",
+    "dev:backend": "pnpm run build:frontend && poetry run python manage.py runserver",
+    "dev:backend:db": "concurrently -n db,backend \"pnpm run dev:db:up\" \"wait-on tcp:5432 && pnpm run dev:backend\"",
+    "dev:frontend": "cd frontend && pnpm i && pnpm run dev",
+    "dev": "concurrently -n backend,frontend \"pnpm run dev:backend\" \"pnpm run dev:frontend\"",
+    "dev:full": "concurrently -n db,backend,frontend \"pnpm run dev:db:up\" \"wait-on tcp:5432 && pnpm run dev:backend\" \"pnpm run dev:frontend\"",
+    "release": "semantic-release",
+    "prepare": "husky"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcelovicentegc/django-react-typescript.git"
+  },
+  "bugs": {
+    "url": "https://github.com/marcelovicentegc/django-react-typescript/issues"
+  },
+  "homepage": "https://github.com/marcelovicentegc/django-react-typescript#readme",
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "concurrently": "^8.2.2",
+    "husky": "^9.0.11",
+    "semantic-release": "^24.0.0",
+    "wait-on": "^7.2.0"
+  }
+}
