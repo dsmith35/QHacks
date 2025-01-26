@@ -43,9 +43,7 @@ new database object:
 
 
 
-use http://127.0.0.1:port and not localhost (for backend especially, idk about frontend)
-
-datbasepassword: same as computer login password
+datbasepassword: s*
 
 
 from start:
