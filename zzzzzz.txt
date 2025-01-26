@@ -9,11 +9,6 @@ npm run dev
 when starting for first time: npm install and remove node_modules in frontend
 
 
-random user:
-justintrudeau@gmail.com
-goathair123!
-
-
 make sure to rename both .env.example in backend and frontend to .env
 
 
@@ -33,8 +28,6 @@ adding new column to table:
 
 
 
-make backend up to date (clear browser cache):
-    ctrl + f5
 
 
 clear database:
