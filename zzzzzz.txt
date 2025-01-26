@@ -49,6 +49,6 @@ datbasepassword: s*
 from start:
 pnpm run bootstrap
 pip install channels django-allauth dj-rest-auth django-phonenumber-field django-phonenumbers
-pnpm
+pnpm dev
 BACKEND: poetry run python manage.py runserver
 FRONTEND: npm run dev
