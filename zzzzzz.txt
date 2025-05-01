@@ -43,7 +43,7 @@ new database object:
 
 
 
-datbasepassword: s*
+dbps: s*
 
 
 from start:
